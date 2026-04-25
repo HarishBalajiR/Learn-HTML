@@ -6,29 +6,108 @@
     <body>
         <h1>Tables in HTML</h1>
         <h2>What is a table?</h2>
-        <ul>
-            <li><b>A table contains rows and columns to store data.</b></li>
-            <p></p>
-            <li><b>Data can be better analyzed using tables</b></li>
-        </ul>
+        <h3>
+            <ul>
+                <li><b>A table contains rows and columns to store data.</b></li>
+                <p></p>
+                <li><b>Data can be better analyzed using tables</b></li>
+            </ul>
+        </h3>
+        <h2>Tags</h2>
+        <h2>
+            <ul>
+                <li><b>Table Tag: </b>Declares the start of a table</li>
+                <li><b>border="1": </b>Shows a border between the rows and columns.</li>
+                <li><b>tr: </b>Short for Table Row(tr), denotes the current row</li>
+                <li><b>th: </b>Short for Table Header(th), use only for table headings, makes them centered and look good.</li>
+                <li><b>td: </b>Short for Table Data(td), denotes the data entered in the table.</li>
+                <li><b>thead: </b>Short for Table Head(thead), enclose th tags in this because it might look broken when adding CSS.</li>
+                <li><b>tbody: </b>Short for Table Body(tbody),enclose td tags in this tag.</li>
+                <li><b>rowspan,colspan: </b>Refer below</li>
+            </ul>
+        </h2>
+        
+        <hr>
+        <h1>Here are some example tables,feel free to change the values or add a new row/column</h1>
         <table border="1">
-            <tr>
-                <th>Roll No</th>
-                <th>Marks</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>99.9</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>0.1</td>
-            </tr>
-            <tr>
-                <td>Total</td>
-                <td>100</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Marks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>99.9</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>0.1</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
         </table>
+        <hr>
+        <h2>rowspan</h2>
+        <h3>rowspan makes the value span upto the number of rows given inside quotes</h3>
+        <h3>Here Core subjects span 3 rows to include 3 subjects</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Subjects</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="3">Core Subjects</td>
+                    <td>Linear Algebra and Number Theory</td>
+                </tr>
+                <tr>
+                    <td>Semiconductors and Nanomaterials</td>
+                </tr>
+                <tr>
+                    <td>Object Oriented Programming with C++</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Additional Subjects</td>
+                    <td>Digital Design Principles</td>
+                </tr>
+                <tr>
+                    <td>Professional English - 2</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <h2>colspan</h2>
+        <h3>colspan makes the value span upto the number of columns given in quotes</h3>
+        <h3>Here Student Report Card spans the 2 columns Roll No and Grade</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th colspan="2">Student Report Card</th>
+                </tr>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>17</td>
+                    <td>A+</td>
+                </tr>
+                <tr>
+                    <td>38</td>
+                    <td>B-</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>For reference, if you have spanned the row, you dont need to enter the data in the current box (row/col)</h1>
         <h1><a href="index.html">Go back to the main page</a></h1>
     </body>
 </html>
